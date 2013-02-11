@@ -58,6 +58,10 @@ module HTTP
       @conn.setRequestMethod('TRACE')
     end
 
+    def get_response_code()
+      return @conn.getResponseCode()
+    end
+
     def get_header(propertyName)
       return @conn.getHeaderField(propertyName)
     end
