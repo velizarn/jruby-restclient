@@ -12,9 +12,12 @@ CONSOLE.puts client.get_header('Content-Type')
 CONSOLE.puts client.get_response_code()
 CONSOLE.puts client.to_s
 ```
+
+```text
 > text/html; charset=utf-8
 > 200
 > ok
+```
 
 ```ruby
 client = HTTP::RestClient.new("http://requestb.in/api/v1/bins/1eaorv81")
@@ -24,9 +27,12 @@ CONSOLE.puts client.get_header('Content-Type')
 CONSOLE.puts client.get_response_code()
 CONSOLE.puts client.to_s
 ```
+
+```text
 > application/json
 > 200
 > {"color": [150, 120, 170], "name": "1eaorv81", "private": false, "request_count": 11}
+```
 
 ### Author
 
