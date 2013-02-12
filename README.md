@@ -38,7 +38,7 @@ CONSOLE.puts client.to_s
 
 velizarn@webdevgears.com
 
-### Credits
+### Dependencies
 
 * [http://commons.apache.org/codec/](http://commons.apache.org/codec/)
 * [http://commons.apache.org/logging/](http://commons.apache.org/logging/)
