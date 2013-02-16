@@ -4,8 +4,9 @@ require 'vendor/commons-codec-1.6.jar'
 require 'vendor/commons-logging-1.1.1.jar'
 require 'vendor/json-simple-1.1.1.jar'
 
-java_import org.apache.commons.codec.binary.Base64
 java_import java.net.URLConnection
+java_import java.io.DataOutputStream
+java_import org.apache.commons.codec.binary.Base64
 java_import org.json.simple.parser.JSONParser
 
 module HTTP
@@ -34,8 +35,18 @@ module HTTP
       @conn.setRequestMethod('GET')
     end
 
-    def post()
+    def post(urlParameters=nil)
       @conn.setRequestMethod('POST')
+      if urlParameters != nil then
+        @conn.setRequestProperty("Content-Length", ""+urlParameters.to_java_bytes.length.to_s)
+        @conn.setUseCaches(false)
+        @conn.setDoInput(true)
+        @conn.setDoOutput(true)
+        wr = DataOutputStream.new(@conn.getOutputStream())
+        wr.writeBytes(urlParameters)
+        wr.flush()
+        wr.close()
+      end
     end
 
     def put()
