@@ -38,6 +38,7 @@ module HTTP
     def post(urlParameters=nil)
       @conn.setRequestMethod('POST')
       if urlParameters != nil then
+        urlParameters = urlParameters.gsub('+', '%2B')
         @conn.setRequestProperty("Content-Length", ""+urlParameters.to_java_bytes.length.to_s)
         @conn.setUseCaches(false)
         @conn.setDoInput(true)
