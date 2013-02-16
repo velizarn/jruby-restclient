@@ -13,7 +13,7 @@ puts client.get_header('Content-Type')
 puts client.get_response_code()
 puts client.to_s
 ```
->>>
+
 ```text
 > text/html; charset=utf-8
 > 200
@@ -29,7 +29,7 @@ puts client.get_header('Content-Type')
 puts client.get_response_code()
 puts client.to_s
 ```
->>>
+
 ```text
 > application/json
 > 200
@@ -44,7 +44,7 @@ client.post("p1=value21&p2=value2")
 
 puts client.to_s
 ```
->>>
+
 ```json
 {
   "args": {},
@@ -80,7 +80,7 @@ jsonObj = client.to_json
 
 puts jsonObj.get('headers').get('Host')
 ```
->>>
+
 ```text
 httpbin.org
 ```
