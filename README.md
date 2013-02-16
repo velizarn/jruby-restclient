@@ -99,7 +99,7 @@ velizarn@webdevgears.com
 
 * 2013-02-16 - bugfix for replacing plus sign in Post parameters
 * 2013-02-16 - Post method update
-* 2013-02-16 - initial commit
+* 2013-02-11 - initial commit
 
 ### Resources
 
